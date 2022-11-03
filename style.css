@@ -54,7 +54,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 32px; /*Corrigir*/
+  gap: 32px;
 }
 
 .card {
@@ -140,9 +140,17 @@ ul li strong {
   }
 }
 
-@media (min-width: 1200px) { /* Linhas de 4 Jogos */
+@media (min-width: 636px) and (max-width: 970px) {
   .cards {
-    max-width: 1000px; /* Calculo de Colunas */
+    max-width: 636px; /* Tamanho do conteiner */
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 970px) { /* Linhas de 4 Jogos */
+  .cards {
+    max-width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
   }
