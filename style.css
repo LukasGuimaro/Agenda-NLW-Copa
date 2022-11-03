@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +10,34 @@
 
 body {
   background-color: #121214;
-  background-image: url(./src/fundo.svg);
+  background-image: var(--bg);
   background-position-x: center;
-  background-position-y: -715px;
+  background-position-y: -615px;
+  /* background-position: top center; */
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+:root { /* Criando na raiz */
+  --card-color-primary: #1d1c19;
+  --card-color-bottom: #f7dd43;
+  --card-color-title-border: #746615;
+  --card-color-h2: gold;
+  --bg: url(./src/bg-yellow.svg);
+}
+
+body.blue {
+  --card-color-primary: #202024;
+  --card-color-title-border: #338AF3;
+  --card-color-bottom: #338AF3;
+  --bg: url(./src/bg-blue.svg);
+}
+
+body.green {
+  --card-color-primary: #1A1F1B;
+  --card-color-title-border: #047C3F;
+  --card-color-bottom: #047C3F;
+  --bg: url(./src/bg-green.svg);
 }
 
 #app {
@@ -26,26 +51,29 @@ header {
 }
 
 .cards {
-  padding: 32px 16px;
-  background: #1d1c19;
-  border-bottom: 2px solid #f7dd43;
-  border-radius: 6px;
-
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 32px; /*Corrigir*/
+}
+
+.card {
+  padding: 32px 16px;
+  background: var(--card-color-primary); /* Variavel CSS */
+  border-bottom: 2px solid var(--card-color-bottom);
+  border-radius: 6px;
 }
 
 .cards h2 {
   padding: 8px 16px;
-  border: 1px solid #746615;
+  border: 1px solid var(--card-color-title-border);
   border-radius: 6px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
-  color: gold;
+  color: var(--card-color-h2);
 
   width: fit-content;
   margin-inline: auto;
@@ -82,4 +110,40 @@ ul li strong {
   font-size: 36px;
   line-height: 125%;
   color: whitesmoke;
+}
+
+.cards h2:hover,
+.cards ul li strong:hover, 
+.cards ul li img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+.cards h2,
+.cards ul li strong:hover, 
+.cards ul li img:hover {
+  transition: transform 0.3s;
+}
+
+.cards {
+  animation: appear 2s forwards;
+  opacity: 0;
+}
+
+@keyframes appear { /* Criando a regra */
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1200px) { /* Linhas de 4 Jogos */
+  .cards {
+    max-width: 1000px; /* Calculo de Colunas */
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
