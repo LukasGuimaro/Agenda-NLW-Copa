@@ -12,8 +12,7 @@ body {
   background-color: #121214;
   background-image: var(--bg);
   background-position-x: center;
-  background-position-y: -615px;
-  /* background-position: top center; */
+  background-position-y: -715px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -41,7 +40,7 @@ body.green {
 }
 
 #app {
-  width: fit-content; /*Encaixando o conteudo na caixa*/
+  width: fit-content; /*Adequando o conteudo na caixa*/
   margin: 52px auto;
 }
 
@@ -83,7 +82,7 @@ header {
 .cards h2 span {
   color: whitesmoke;
   font-size: 14px;
-  text-transform: uppercase; /*Todo texto em caixa alta*/
+  text-transform: uppercase; /*Texto em caixa alta*/
 }
 
 ul li {
@@ -100,7 +99,7 @@ ul li {
 }
 
 .cards ul li + li {
-  /*Selecionado o li com um li anterior*/
+  /* Selecionado o li com um li anterior */
   padding-top: 24px;
   border-top: 1px solid #323238;
 }
@@ -115,8 +114,8 @@ ul li strong {
 .cards h2:hover,
 .cards ul li strong:hover, 
 .cards ul li img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s;
+  transform: scale(1.2);
+  transition: transform 0.1s;
 }
 
 .cards h2,
@@ -130,7 +129,7 @@ ul li strong {
   opacity: 0;
 }
 
-@keyframes appear { /* Criando a regra */
+@keyframes appear { /* Aplicando a regra */
   0% {
     transform: translateY(-50px);
     opacity: 0;
@@ -140,15 +139,15 @@ ul li strong {
   }
 }
 
-@media (min-width: 636px) and (max-width: 970px) {
+@media (min-width: 636px) and (max-width: 970px) { /* Regras de Tamanhos */
   .cards {
-    max-width: 636px; /* Tamanho do conteiner */
+    max-width: 636px;
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
 
-@media (min-width: 970px) { /* Linhas de 4 Jogos */
+@media (min-width: 970px) {
   .cards {
     max-width: 100%;
     flex-direction: row;

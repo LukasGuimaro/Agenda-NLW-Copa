@@ -1,9 +1,9 @@
 function createGame(player1, hour, player2) {
   return `
      <li>
-        <img src="./src/icon=${player1}.svg" alt="Bandeira ${player1}">
+        <img src="./src/icon=${player1}.svg" alt="Bandeira ${player1}" title="${player1}">
         <strong>${hour}</strong>
-        <img src="./src/icon=${player2}.svg" alt="Bandeira ${player2}">
+        <img src="./src/icon=${player2}.svg" alt="Bandeira ${player2}" title="${player2}">
       </li>
   `
 }
@@ -110,4 +110,12 @@ document.querySelector(".cards").innerHTML =
       createGame("canada", "F | 11:00", "morocco") +
       createGame("japan", "E | 15:00", "spain") +
       createGame("costa rica", "E | 15:00", "germany")
+  ) +
+  createCard(
+    "02/12",
+    "sexta",
+    createGame("south korea", "H | 11:00", "portugal") +
+      createGame("ghana", "H | 11:00", "uruguay") +
+      createGame("serbia", "G | 15:00", "switzerland") +
+      createGame("cameroon", "G | 15:00", "brazil")
   ) 
