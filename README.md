@@ -1,4 +1,6 @@
+<p aling="center">
 ## Calendário da Copa no Catar 
+</p>
 
 Projeto Front-end de um calendário da copa no catar, com a implementação de um versionamento de codigo HTML por meio da linguagem JavaScript, desenvolvido durante a semana </nlw> Copa da Rocketseat. 
 
