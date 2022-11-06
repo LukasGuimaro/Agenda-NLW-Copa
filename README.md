@@ -1,8 +1,8 @@
-<p aling="center">
+<p align="center">
 <h2>Calendário da Copa no Catar</h2> 
 </p>
 
-Projeto Front-end de um calendário da copa no catar, com a implementação de um versionamento de codigo HTML por meio da linguagem JavaScript, desenvolvido durante a semana </nlw> Copa da Rocketseat. 
+Projeto Front-end de um calendário da copa no catar, com a implementação de versionamento de codigo HTML por meio da linguagem JavaScript, desenvolvido durante a semana NLW Copa da Rocketseat.
 
 ### Tecnologias
 - HTML5
@@ -15,7 +15,9 @@ Projeto Front-end de um calendário da copa no catar, com a implementação de u
 
 ### Layout Mobile:
 
-![interface](https://github.com/LukasGuimaro/Agenda-NLW-Copa/blob/main/src/TelaMobile.png)
+<p align="center">
+<img alt="calendario da copa" src="https://github.com/LukasGuimaro/Agenda-NLW-Copa/blob/main/src/TelaMobile.png">
+</p>
 
 ### Autor: 
 
